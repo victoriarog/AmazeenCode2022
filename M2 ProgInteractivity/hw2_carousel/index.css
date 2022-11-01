@@ -1,0 +1,83 @@
+/*
+* Base styles
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 60px;
+    padding: 40px;
+    color: white;
+  
+    transition: transform 1s ease-out;
+    transition-delay: 1s;
+    transform: translate(300px, -300px) rotate(200deg);
+  }
+  
+  .slide.active h1 {
+    transform: translate(0, 0) rotate(0);
+  }
+  
+  /*
+  * Layout styles
+  */
+  
+  .carousel {
+    position: relative;
+    margin: 100px auto;
+    width: 800px;
+    height: 600px;
+    border: 5px solid black;
+    overflow: hidden;
+  }
+  
+  .slidedeck {
+    display: flex;
+    flex-direction: row;
+  
+    transition: transform 1s ease-in-out;
+    /*transform: translateX(-800px);*/
+  }
+  
+  .slide {
+    width: 800px;
+    height: 600px;
+    background-color: hotpink;
+    flex-shrink: 0;
+  }
+  
+  .button {
+    position: absolute;
+    top: 280px;
+    padding: 20px 40px;
+  }
+  
+  .button.prev {
+    left: 0;
+  }
+  
+  .button.next {
+    right: 0;
+  }
+  
+  /*
+  * Color slides
+  */
+  
+  .slide:nth-child(1) {
+    background-color: blue;
+  }
+  
+  .slide:nth-child(2) {
+    background-color: green;
+  }
+  
+  .slide:nth-child(3) {
+    background-color: purple;
+  }
+  

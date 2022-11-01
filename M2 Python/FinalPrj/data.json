@@ -1,0 +1,13 @@
+{
+    "races" : {
+        "Human" : ["Extra language"],
+        "Elf" : ["Darkvision", "Keen Senses", "Fey Ancestry", "Trance" ],
+        "Dwarf" : ["Darkvision", "Dwarven resilience", "Stonecunning"],
+        "Halfling" : ["Lucky", "Brave", "Halfling nimbnesss"],
+        "Tiefling" : ["Darkvision", "Hellish Resistance", "Infernal legacy" ],
+        "Orc" : ["Darkvision", "Adrenaline rush", "Powerful build", "Relentless endurance"]
+    },
+
+    "classes" : ["Fighter", "Wizard", "Rogue", "Druid", "Barbarian", "Sorcerer", "Bard", "Cleric", "Monk", "Paladin"],
+    "gender" : ["Male", "Female", "N/A"]
+}

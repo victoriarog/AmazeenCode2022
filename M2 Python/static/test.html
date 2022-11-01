@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test AJAX</title>
+
+    <script type="application/javascript">
+        function getData() {
+        fetch('http://127.0.0.1:5000/data')
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data)
+            document.getElementById('data_div').innerText = data["color"];
+                }
+            );
+        }
+
+        function sendData() {
+        const name = document.getElementById('userName').value;
+        fetch('http://127.0.0.1:5000/put-data?name='+ name)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data)
+            document.getElementById('data_div').innerText = data["color"];
+                }
+            );
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <button onclick="getData()">Get data</button>
+    </div>
+    <div>
+        <input type="text" id="userName" name="user_name" value="Vicki">
+        <button onclick="sendData()">Send data</button>
+    </div>
+    <div id="data_div"></div>
+</body>
+</html>

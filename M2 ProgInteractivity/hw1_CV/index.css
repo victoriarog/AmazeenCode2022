@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Montserrat+Alternates:wght@200&family=Nixie+One&display=swap');
+
+body {
+    width: 80%;
+    margin: 0px auto;
+    color: #6a6a6a;
+    background-color: #d6ccc2;
+}
+
+
+.page-wrapper {
+    background-color: #f5ebe0; 
+}
+
+img {
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    margin-top: 40px;
+}
+
+.photo-txt {
+    margin: 0px auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.desc-txt {
+    margin-bottom: 30px;
+}
+
+.h3txt {
+    margin-bottom: 10px;
+}
+
+.about {
+    padding: 50px 40px;
+    padding-bottom: 50px;
+    width: 75%;
+}
+
+.exp {
+    padding: 50px 40px;
+    padding-bottom: 80px;
+}
+h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 26px;
+}
+
+h2, h3, h4 {
+    color: #6a6a6a;
+    font-family: 'Nixie One', cursive;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin: 0 auto;
+
+}
+
+h4 {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.exph1 {
+    margin: 0 auto;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.p-txt {
+    font-family: 'Nixie One', cursive;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        width: 100%;
+        margin: 0;
+        height: 100%;
+        overflow-y: hidden;
+    }
+    
+    .photo-txt {
+        padding-top: 150px;
+        background-color: #d6ccc2;
+    }
+
+    .page-wrapper {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;   
+    }
+
+    .desc-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        } 
+
+    .p-txt {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }    
+
+    hr {
+        display: none;
+        
+    }
+
+    .about, .exp {
+        padding-top: 100px;
+        height: 100%;
+    }
+
+    .exp {
+        padding-bottom: 20px;
+    }
+
+    .photo-txt {
+        margin: 0;
+        padding-bottom: 0;
+    }
+}
