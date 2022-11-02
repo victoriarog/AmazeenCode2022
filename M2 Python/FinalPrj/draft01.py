@@ -21,7 +21,7 @@ def __getAbilityScores__(characterClass):
     scores = sorted(scores)
     characterScores = {'STR':0,'DEX':0,'CON':0,'INT':0,'WIS':0,'CHA':0}
 
-    match characterClass: #hard coded for now to test 
+    match characterClass: #hard coded for now to test ig 
         case "Fighter":
             characterScores["STR"] = scores[5]
             characterScores["CON"] = scores[4]
@@ -71,10 +71,12 @@ class playerCharacter:
         self.age = " "
         self.race = " "
         self.charClass = " " #class isn't a WORD TO USE
-        self.abilityScores = __getAbilityScores__(self.charClass) #-> test later
+        self.abilityScores = " "
+
+#TESTING AREA
 
 newCharacter = playerCharacter()
 newCharacter.name = "Alex" 
-newCharacter.charClass = "Wizard" # this doesnt work
-print(__getAbilityScores__("Wizard")) # this does
+newCharacter.charClass = "Wizard"
+newCharacter.abilityScores = __getAbilityScores__("Wizard") #test test test
 print(vars(newCharacter))
