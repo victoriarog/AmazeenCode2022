@@ -75,8 +75,20 @@ class playerCharacter:
 
 #TESTING AREA
 
+# newCharacter.name = "Alex" 
+# newCharacter.charClass = "Wizard"
+# newCharacter.abilityScores = __getAbilityScores__("Wizard") #test test test
+
+# INPUT TESTING
+
 newCharacter = playerCharacter()
-newCharacter.name = "Alex" 
-newCharacter.charClass = "Wizard"
-newCharacter.abilityScores = __getAbilityScores__("Wizard") #test test test
+
+newCharacter.name = input("Input the character name: ")
+newCharacter.gender = input("Input your character gender: ")
+newCharacter.age = input("Choose your character age: ")
+newCharacter.race = input("Choose your character's race: ")
+newCharacter.charClass = input("What's your character class: ")
+newCharacter.abilityScores = __getAbilityScores__(newCharacter.charClass)
+
+print(f"Here's your basic character sheet: ")
 print(vars(newCharacter))
