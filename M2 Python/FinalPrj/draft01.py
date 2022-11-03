@@ -1,10 +1,6 @@
 import random
 import json
 
-# races = ["Human", "Dwarf", "Halfling", "Elf", "Tiefling", "Orc"]
-# classes = ["Fighter", "Wizard", "Rogue", "Druid", "Barbarian", "Sorcerer", "Bard", "Cleric", "Monk", "Paladin"]
-# genders = ["Male", "Female", "N/A"]
-
 # ability score calculator-ish????
 
 def __getAbilityScores__():
@@ -19,7 +15,7 @@ def __getAbilityScores__():
         scores.append(sum(score)) # and summing all the values together and saving them above
 
     scores = sorted(scores)
-    characterScores = {'STR':0,'DEX':0,'CON':0,'INT':0,'WIS':0,'CHA':0}
+    # characterScores = {'STR':0,'DEX':0,'CON':0,'INT':0,'WIS':0,'CHA':0}
     return(scores)
 
     # match characterClass: #hard coded for now to test ig 
@@ -73,15 +69,10 @@ class playerCharacter:
         self.charClass = " " #class isn't a WORD TO USE
         self.abilityScores = " "
 
-#TESTING AREA
-
-# newCharacter.name = "Alex" 
-# newCharacter.charClass = "Wizard"
-# newCharacter.abilityScores = __getAbilityScores__("Wizard") #test test test
 
 # INPUT TESTING
 
-newCharacter = playerCharacter()
+# newCharacter = playerCharacter()
 
 # newCharacter.name = input("Input the character name: ")
 # newCharacter.age = input("Choose your character age: ")
@@ -90,5 +81,6 @@ newCharacter = playerCharacter()
 # newCharacter.abilityScores = __getAbilityScores__(newCharacter.charClass)
 
 print(__getAbilityScores__())
-print(f"Here's your basic character sheet: ")
-print(vars(newCharacter))
+
+# print(f"Here's your basic character sheet: ")
+# print(vars(newCharacter))
