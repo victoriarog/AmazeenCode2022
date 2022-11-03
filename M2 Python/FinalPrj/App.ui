@@ -677,7 +677,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QComboBox" name="STR">
+   <widget class="QComboBox" name="Strength">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -722,7 +722,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QComboBox" name="CON">
+   <widget class="QComboBox" name="Constituition">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -767,7 +767,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QComboBox" name="DEX">
+   <widget class="QComboBox" name="Dexterity">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -812,7 +812,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QComboBox" name="INT">
+   <widget class="QComboBox" name="Intelligence">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -857,7 +857,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QComboBox" name="WIS">
+   <widget class="QComboBox" name="Wisdom">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -902,7 +902,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QComboBox" name="CHA">
+   <widget class="QComboBox" name="Charisma">
     <property name="geometry">
      <rect>
       <x>400</x>
