@@ -3,16 +3,33 @@ from PyQt5 import QtWidgets, uic
 import random
 
 from App import Ui_DnDStuff
+from Form import Ui_Form
+
+class Popup(QtWidgets.QWidget, Ui_Form):
+    def __init__(self, *args, obj=None, **kwargs):
+        super(Popup, self).__init__(*args, **kwargs)
+        self.setupUi(self)
+
+        self.disName.setText(nameSet)
+        self.disAge.setText(ageSet)
+        self.disRace.setText(raceSet)
+        self.disClass.setText(classSet)
+
+        self.disSTR.display(disSetSTR)
+        self.disCON.display(disSetCON)
+        self.disDEX.display(disSetDEX)
+        self.disINT.display(disSetINT)
+        self.disWIS.display(disSetWIS)
+        self.disCHA.display(disSetCHA)
 
 
+    
 
 
 class App(QtWidgets.QMainWindow, Ui_DnDStuff):
     def __init__(self, *args, obj=None, **kwargs):
         super(App, self).__init__(*args, **kwargs)
         self.setupUi(self)
-
-        # set variables
 
         self.submit.clicked.connect(self.submitAll)
 
@@ -72,37 +89,49 @@ class App(QtWidgets.QMainWindow, Ui_DnDStuff):
         global setSTR
         setSTR = self.Strength.currentText()
         self.numSTR.display(self.matchyMatch(setSTR))
-        return setSTR
+        global disSetSTR
+        disSetSTR = self.matchyMatch(setSTR)
+        return setSTR, disSetSTR
 
     def setCON(self):
         global setCON
         setCON = self.Constituition.currentText()
         self.numCON.display(self.matchyMatch(setCON))
-        return setCON
+        global disSetCON
+        disSetCON = self.matchyMatch(setCON)
+        return setCON, disSetCON
 
     def setDEX(self):
         global setDEX
         setDEX = self.Dexterity.currentText()
         self.numDEX.display(self.matchyMatch(setDEX))
-        return setDEX
+        global disSetDEX
+        disSetDEX = self.matchyMatch(setDEX)
+        return setDEX, disSetDEX
 
     def setINT(self):
         global setINT
         setINT = self.Intelligence.currentText()
         self.numINT.display(self.matchyMatch(setINT))
-        return setINT
+        global disSetINT
+        disSetINT = self.matchyMatch(setINT)
+        return setINT, disSetINT
 
     def setWIS(self):
         global setWIS
         setWIS = self.Wisdom.currentText()
         self.numWIS.display(self.matchyMatch(setWIS))
-        return setWIS
+        global disSetWIS
+        disSetWIS = self.matchyMatch(setWIS)
+        return setWIS, disSetWIS
 
     def setCHA(self):
         global setCHA
         setCHA = self.Charisma.currentText()
         self.numCHA.display(self.matchyMatch(setCHA))
-        return setCHA
+        global disSetCHA
+        disSetCHA = self.matchyMatch(setCHA)
+        return setCHA, disSetCHA
 
     def getAbilityScores(self):
         global scores 
@@ -129,16 +158,10 @@ class App(QtWidgets.QMainWindow, Ui_DnDStuff):
 
        
     def submitAll(self):
-        print("Name: " + nameSet)
-        print("Age: " + ageSet)
-        print("Race: " + raceSet)
-        print("Class: " + classSet)
-        print(self.matchyMatch(setSTR))
-        print(self.matchyMatch(setCON))
-        print(self.matchyMatch(setDEX))
-        print(self.matchyMatch(setINT))
-        print(self.matchyMatch(setWIS))
-        print(self.matchyMatch(setCHA))
+
+        self.window = Popup()
+        self.window.show()
+
 
 app = QtWidgets.QApplication(sys.argv)
 
